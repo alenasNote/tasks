@@ -1,0 +1,71 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+#page {
+  position: relative;
+
+}
+
+.login-form{
+  position: absolute;
+  left: 45%;
+  bottom: -40vh;
+}
+
+.labels {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: absolute;
+  left: -100px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+.wrapper {
+  margin-bottom: 5px;
+}
+
+#clock {
+  position: absolute;
+  bottom: -90vh;
+  left:40%;
+}
+
+.error-message {
+  
+  font-size: 10px;
+  color: rgb(220, 11, 11);
+}
+
+.error .input-field {
+  border: 1px solid red;
+  background-color: rgba(255, 172, 172, 0.5);
+  
+  
+}
+
+.input-field {
+  border: 1px solid rgba(98, 96, 96, .5);
+  border-radius: 4px;
+  margin-right: 5px;
+  width: 141px;
+}
+
+.btn {
+  font-family: "Open Sans";
+  font-weight: bold;
+  opacity: 0.85;
+  background: rgb(255, 109, 109);
+  border-radius: 4px;
+  text-decoration: none;
+  width: 144px;
+  height: 42px;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  border: 0;
+  margin-top: 10px;
+}

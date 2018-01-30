@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Страница авторизации</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+</head>
+<body>
+  <main id="page">
+    <form class="login-form">
+      <div class="wrapper labels">
+        <label for="login">Ваш логин:</label>
+        <label for="password">Ваш пароль:</label>
+      </div>
+      <div class="wrapper">
+        <input class="input-field" type="email" name="login" id="login">
+      </div>
+      <div class="wrapper">
+        <input class="input-field" type="password" name="password" id="password">
+      </div>
+      <div>
+        <input type="button" class="btn" value="Войти" onclick="validate(this.form)">
+      </div>
+    </form>
+
+    <div id="clock">
+      <span class="time hour">hh</span>:
+      <span class="time min">mm</span>:
+      <span class="time sec">ss</span>
+      <span class="calendar day">today</span>
+      <span class="calendar date">date</span>
+    </div>
+
+  </main>
+  <script src="script.js" type="text/javascript"></script>
+  <script src="browserDetect.js" type="text/javascript"></script>
+</body>
+</html>
