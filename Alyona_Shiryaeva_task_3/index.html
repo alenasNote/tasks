@@ -12,12 +12,16 @@
       <div class="wrapper labels">
         <label for="login">Ваш логин:</label>
         <label for="password">Ваш пароль:</label>
+        <label for="tel">Ваш телефон:</label>
       </div>
       <div class="wrapper">
-        <input class="input-field" type="email" name="login" id="login">
+        <input class="input-field" type="email" name="login" id="login" maxlength="30">
       </div>
       <div class="wrapper">
-        <input class="input-field" type="password" name="password" id="password">
+        <input class="input-field" type="password" name="password" id="password" maxlength="30">
+      </div>
+      <div class="wrapper">
+        <input class="input-field" type="tel" name="tel" id="tel" maxlength="14">
       </div>
       <div>
         <input type="button" class="btn" value="Войти" onclick="validate(this.form)">

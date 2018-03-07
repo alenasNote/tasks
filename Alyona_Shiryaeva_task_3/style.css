@@ -18,7 +18,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   position: absolute;
-  left: -100px;
+  left: -120px;
 }
 
 label {
@@ -67,5 +67,5 @@ label {
   font-size: 16px;
   color: rgb(255, 255, 255);
   border: 0;
-  margin-top: 10px;
+  margin-top: 15px;
 }

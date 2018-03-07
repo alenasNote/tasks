@@ -80,6 +80,8 @@ function resetError(container) {
 function validate(form) {
   var elems = form.elements;
 
+//Валидация поля ввода email
+
   resetError(elems.login.parentNode);
   if (!elems.login.value) {
     showError(elems.login.parentNode, 'Укажите ваш email.');
@@ -96,6 +98,8 @@ function validate(form) {
   else if (!(elems.login.value).match(/@{1}[a-zа-яё]{1,}\.{1}[a-zа-яё]{2,6}$/)) {
     showError(elems.login.parentNode, 'Поле должно содержать email-адрес в формате name@domain.com.');
   }
+
+//Валидация поля ввода пароля
 
   resetError(elems.password.parentNode);
   if (!elems.password.value) {
@@ -116,6 +120,33 @@ function validate(form) {
 
   else if (!(elems.password.value).match(/[^a-zA-Z0-9а-яА-ЯёЁ]{1,}/)) {
     showError(elems.password.parentNode, 'Пароль должен содержать спецсимволы.');
+  }
+
+//Валидация поля ввода телефона
+
+  resetError(elems.tel.parentNode);
+  if (!elems.tel.value) {
+    showError(elems.tel.parentNode, 'Укажите Ваш мобильный телефон.');
+  }
+
+  else if (!(elems.tel.value).match(/^[8]{1}|^[+7]{2}/)) {
+    showError(elems.tel.parentNode, 'Телефон должен начинаться с цифр: +7хххххххххх; 8хххххххххх');
+  }
+
+  else if ((elems.tel.value).match(/[^0-9+()]{1,}|^[()]{1,}|[+()]{1,}$|[+()]{2,}/)) {
+    showError(elems.tel.parentNode, 'Введённый номер содержит неверные символы.');
+  }
+
+  else if ((elems.tel.value).match(/[+7]{2}[0-9]{0,9}$|^[8]{1}[0-9]{0,9}$|^[8]{1}[(]{1}[0-9]{3}[)]{1}[0-9]{1,6}$|^[+7]{2}[(]{1}[0-9]{3}[)]{1}[0-9]{1,6}$/)) {
+    showError(elems.tel.parentNode, 'Введённый номер слишком короткий.');
+  }
+
+  else if ((elems.tel.value).match(/^[+7]{2}[0-9]{11}|^[0-9]{12}|^[8]{1}[(]{1}[0-9]{3}[)]{1}[0-9]{8}/)) {
+    showError(elems.tel.parentNode, 'Введённый номер слишком длинный.');
+  }
+
+  else if ((elems.tel.value).match(/[(]{1}[0-9]{4,}|[0-9]{4,}[)]{1}/)) {
+    showError(elems.tel.parentNode, 'Неправильно расставлены скобки. Образец: +7(ххх)ххххххх');
   }
 }
 
